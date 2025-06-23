@@ -180,7 +180,7 @@ a{
     background: #1f242d;
     border: 2px solid #fff;
     transform: translateY(-100%);
-    animation: show-bars;
+    animation: show-bars .5s ease-in-out forwards;
 }
 
 @keyframes show-bars {
