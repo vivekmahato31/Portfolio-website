@@ -7,12 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-a{
+a {
     color: #fff;
     text-decoration: none;
 }
 
-.navbar{
+.navbar {
     position: fixed;
     left: 0;
     top: 0;
@@ -28,29 +28,28 @@ a{
     animation-delay: 1.2s;
 }
 
-@keyframes show-content{
-    100%{
+@keyframes show-content {
+    100% {
         visibility: visible;
         opacity: 1;
     }
 }
 
-.navbar .logo{
+.navbar .logo {
     font-size: 30px;
     font-weight: 700;
 }
 
-.navbar ul{
+.navbar ul {
     display: flex;
-
 }
 
-.navbar ul li{
+.navbar ul li {
     list-style: none;
     margin-left: 35px;
 }
 
-.navbar ul li a{
+.navbar ul li a {
     font-size: 20px;
     font-weight: 500;
     transition: .5s;
@@ -59,14 +58,9 @@ a{
 .navbar ul li:hover a,
 .navbar ul li.active a {
     color: #7cf03d;
-    /* border: 2px solid #7cf03d;
-    border-radius: 5px;
-    padding: 5px 10px;
-    background-color: #000; */
-
 }
 
-.home{
+.home {
     display: flex;
     align-items: center;
     height: 100vh;
@@ -77,20 +71,19 @@ a{
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.6s;
-
 }
 
-.home-info h1{
+.home-info h1 {
     font-size: 55px;
 }
 
-.home-info h2{
+.home-info h2 {
     font-size: 32px;
     margin-top: -10px;
     display: inline-block;
 }
 
-.home-info h2 span{
+.home-info h2 span {
     position: relative;
     display: inline-block;
     color: transparent;
@@ -99,14 +92,13 @@ a{
     animation-delay: calc(-4s * var(--i));
 }
 
-@keyframes display-text{
-    25%,100% {
+@keyframes display-text {
+    25%, 100% {
         display: none;
-
     }
 }
 
-.home-info h2 span::before{
+.home-info h2 span::before {
     content: attr(data-text);
     position: absolute;
     width: 0;
@@ -117,25 +109,26 @@ a{
     animation: fill-text 4s linear infinite;
 }
 
-@keyframes fill-text{
-    10%,100% {
-     width: 0;
+@keyframes fill-text {
+    10%, 100% {
+        width: 0;
     }
-    70%,90% {
+    70%, 90% {
         width: 100%;
-       }
+    }
 }
 
-.home-info p{
+.home-info p {
     font-size: 16px;
     margin: 10px 0 15px;
 }
-.home-info .btn-sci{
+
+.home-info .btn-sci {
     display: flex;
     align-items: center;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 600;
@@ -153,12 +146,12 @@ a{
     box-shadow: none;
 }
 
-.home-info .btn-sci .sci{
+.home-info .btn-sci .sci {
     font-size: 20px;
     margin-left: 15px;
 }
 
-.home-info .btn-sci .sci a{
+.home-info .btn-sci .sci a {
     display: inline-flex;
     padding: 8px;
     color: #7cf03d;
@@ -168,17 +161,16 @@ a{
     transition: .5s;
 }
 
-.home-info .btn-sci .sci a:hover{
+.home-info .btn-sci .sci a:hover {
     background-color: #7cf03d;
     color: #1f242d;
     box-shadow: 0 0 10px #1f242d;
 }
 
-.home-img .img-box{
+.home-img .img-box {
     position: relative;
     width: 32vw;
     height: 32vw;
-    /* background-color: red; */
     border-radius: 50%;
     padding: 5px;
     display: flex;
@@ -188,7 +180,7 @@ a{
 }
 
 .home-img .img-box::before,
-.home-img .img-box::after{
+.home-img .img-box::after {
     content: '';
     position: absolute;
     width: 500px;
@@ -196,29 +188,28 @@ a{
     background: conic-gradient(transparent, transparent, transparent, #7cf03d);
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
-
 }
 
 @keyframes rotate-border {
     100% {
-       transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
-.home-img .img-box .img-item{
+.home-img .img-box .img-item {
     position: relative;
-     width: 100%;
-     height: 100%;
-     border: .5px solid #1f242d;
-     background: #1f242d;
-     border-radius: 50%;
-     display: flex;
-     z-index: 1;
-     justify-content: center;
-     overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: .5px solid #1f242d;
+    background: #1f242d;
+    border-radius: 50%;
+    display: flex;
+    z-index: 1;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.home-img .img-box .img-item img{
+.home-img .img-box .img-item img {
     position: absolute;
     top: 35px;
     left: 25px;
@@ -228,14 +219,15 @@ a{
     mix-blend-mode: lighten;
 }
 
-.bars-animation{
+.bars-animation {
     position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     z-index: -1;
 }
-.bars-animation .bar{
+
+.bars-animation .bar {
     width: 100%;
     height: 100%;
     background: #1f242d;
@@ -246,7 +238,94 @@ a{
 
 @keyframes show-bars {
     100% {
-    transform: translateY(0%);
-       
+        transform: translateY(0%);
+    }
+}
+
+/* -------------------------------
+   RESPONSIVE STYLES FOR PHONES
+---------------------------------*/
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .logo {
+        font-size: 24px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
+    .home {
+        flex-direction: column;
+        gap: 40px;
+        padding: 80px 5% 20px;
+        text-align: center;
+    }
+
+    .home-info h1 {
+        font-size: 36px;
+    }
+
+    .home-info h2 {
+        font-size: 24px;
+    }
+
+    .home-info p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .home-info .btn-sci {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-info .btn-sci .sci {
+        margin-left: 0;
+    }
+
+    .home-img .img-box {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .home-img .img-box .img-item img {
+        top: 20px;
+        left: 10px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-info h1 {
+        font-size: 28px;
+    }
+
+    .home-info h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 16px;
     }
 }
