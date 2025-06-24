@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+/* Reset & Global */
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +8,19 @@
   font-family: 'Poppins', sans-serif;
 }
 
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #1f242d;
+}
+
+/* Links */
 a {
   color: #fff;
   text-decoration: none;
 }
 
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -44,6 +53,7 @@ a {
 
 .nav-links {
   display: flex;
+  box-sizing: border-box;
 }
 
 .nav-links li {
@@ -62,6 +72,7 @@ a {
   color: #7cf03d;
 }
 
+/* Home Section */
 .home {
   display: flex;
   align-items: center;
@@ -126,6 +137,7 @@ a {
   margin: 10px 0 15px;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 10px 30px;
@@ -154,6 +166,7 @@ a {
   margin-bottom: 10px;
 }
 
+/* Social Icons */
 .sci {
   font-size: 20px;
 }
@@ -174,6 +187,7 @@ a {
   box-shadow: 0 0 10px #1f242d;
 }
 
+/* Home Image */
 .home-img .img-box {
   position: relative;
   width: 32vw;
@@ -225,15 +239,17 @@ a {
   mix-blend-mode: lighten;
 }
 
+/* Background Bars Animation */
 .bars-animation {
-    position: fixed; /* not absolute */
-    top: 0;
-    left: 0;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  z-index: -1;
+}
 
 .bars-animation .bar {
   width: 100%;
@@ -250,9 +266,7 @@ a {
   }
 }
 
-/* ==============
-   Responsive Menu
-================= */
+/* Hamburger Menu */
 .menu-toggle {
   display: none;
   font-size: 30px;
@@ -260,6 +274,7 @@ a {
   cursor: pointer;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
